@@ -1,4 +1,4 @@
-import { html, css, LitElement, property, customElement, query } from 'lit-element';
+import { html, css, LitElement, customElement, query } from 'lit-element';
 import { searchProperty, URLSearchPropertyMixin } from '../src/url-search-property.js';
 
 const SIZE_OPTION = [5,10,25];
@@ -42,7 +42,7 @@ export class TestTable extends URLSearchPropertyMixin(LitElement) {
         ${SIZE_OPTION.map(s => html`<option value="${s}" ?selected=${s === this.pageSize}>${s}</option>`)}
       </select>
       <div>
-        <input type="checkbox" id="enabledChechbox" name="enabled" value="true" @click=${(e: any) => {
+        <input type="checkbox" id="enabledChechbox" name="enabled" value="true" @click=${() => {
         this.enabled = this.enabledChechbox!.checked;
       }} ?checked=${this.enabled}>
         <label for="enabledChechbox"> Enabled</label><br>

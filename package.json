@@ -19,8 +19,6 @@
     "test:watch": "concurrently --kill-others --names tsc,karma \"npm run tsc:watch\" \"karma start --auto-watch=true --single-run=false\""
   },
   "devDependencies": {
-    "lit-html": "^1.1.2",
-    "lit-element": "^2.2.1",
     "@material/mwc-tab-bar": "^0.18.0",
     "@open-wc/demoing-storybook": "^2.0.0",
     "@open-wc/eslint-config": "^2.0.0",
@@ -29,6 +27,7 @@
     "@types/node": "13.11.1",
     "@typescript-eslint/eslint-plugin": "^2.20.0",
     "@typescript-eslint/parser": "^2.20.0",
+    "chai": "^4.2.0",
     "concurrently": "^5.1.0",
     "deepmerge": "^3.2.0",
     "es-dev-server": "^1.23.0",
@@ -36,6 +35,8 @@
     "eslint-config-prettier": "^6.11.0",
     "husky": "^1.0.0",
     "lint-staged": "^10.0.0",
+    "lit-element": "^2.2.1",
+    "lit-html": "^1.1.2",
     "prettier": "^2.0.4",
     "tslib": "^1.11.0",
     "typescript": "~3.8.2"
