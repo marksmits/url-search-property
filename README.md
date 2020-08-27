@@ -2,7 +2,7 @@
 
 This project provides `UrlSearchQueryMixin` and a decorator `@searchProperty`. Through this decorator it is very easy to add properties to the URL search params. 
 
-This will create a two way bind beteen the property and the url param. If you update the url param the property will update and trigger a rerender like other properties do. Also if you update the property the url will auto update to reflect the new property value. 
+This will create a two way bind between the property and the url param. If you update the url param the property will update and trigger a re-render like other properties do. Also if you update the property the url will auto update to reflect the new property value. 
 
 ```ts
 @customElement('test-app')
@@ -25,7 +25,7 @@ Important information when using the `@searchProperty`:
 
 ## Browser History API
 
-It is also possible to enable ability to push the url to the browser history. This can be done by setting the `enablePushState` property to true. By default this property is set to false.
+It is also possible to enable the ability to push the url to the browser history. This can be done by setting the `enablePushState` property to true. By default this property is set to false.
 
 ```ts
   constructor() {
@@ -36,7 +36,7 @@ It is also possible to enable ability to push the url to the browser history. Th
 
 ## Updating properties
 
-When adjusting url search params though `history.replaceState` or `history.pushState` elements will not be notified of these changes automaticly. To notify elements you could manualy trigger a `search-property-changed` event on the document window.
+When adjusting url search params through `history.replaceState` or `history.pushState` elements will not be notified of these changes automatically. To notify elements you could manualy trigger a `search-property-changed` event on the document window.
 
 ```ts
   window.dispatchEvent(
@@ -52,4 +52,4 @@ This project uses the `URLSearchParams`. Make sure to check if you need to load 
 
 The [URLSearchParams](https://github.com/ungap/url-search-params) Polyfill.
 
-For browser supprt of the [MDN History API] (https://developer.mozilla.org/en-US/docs/Web/API/History_API)
+For browser support of the [MDN History API] (https://developer.mozilla.org/en-US/docs/Web/API/History_API)
