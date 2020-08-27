@@ -35,11 +35,11 @@ It is also possible to enable/disable ability to push the url to the browser his
 
 ## Updating properties
 
-when adjusting url params though `history.replaceState` or `history.pushState` elements will not be notified of these changes. To notify you could trigger a `location-changed` event on the window.
+when adjusting url params though `history.replaceState` or `history.pushState` elements will not be notified of these changes. To notify you could trigger a `search-property-changed` event on the window.
 
 ```ts
   window.dispatchEvent(
-    new CustomEvent('location-changed', {
+    new CustomEvent('search-property-changed', {
       detail: {url},
     }),
   );

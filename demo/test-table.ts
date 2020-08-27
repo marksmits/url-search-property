@@ -1,8 +1,6 @@
 import { html, css, LitElement, customElement, query } from 'lit-element';
 import { searchProperty, URLSearchPropertyMixin } from '../src/url-search-property.js';
 
-const SIZE_OPTION = [5,10,25];
-
 @customElement('test-table')
 export class TestTable extends URLSearchPropertyMixin(LitElement) {
 
@@ -35,11 +33,13 @@ export class TestTable extends URLSearchPropertyMixin(LitElement) {
       pageSize: ${this.pageSize}<br>
       <br>
 
+      <p>Example of options used in a data grid</p>
+
       <button @click=${() => this.pageIndex += 1}>NEXT PAGE</button>
       <select id="pageSizeSelect" @change=${() => {
         this.pageSize = parseInt(this.pageSizeSelect!.value, 10);
       }}>
-        ${SIZE_OPTION.map(s => html`<option value="${s}" ?selected=${s === this.pageSize}>${s}</option>`)}
+        ${[5, 10, 25].map(s => html`<option value="${s}" ?selected=${s === this.pageSize}>${s}</option>`)}
       </select>
       <div>
         <input type="checkbox" id="enabledChechbox" name="enabled" value="true" @click=${() => {

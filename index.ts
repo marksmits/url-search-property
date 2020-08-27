@@ -4,6 +4,6 @@ export { URLSearchPropertyMixin, searchProperty } from './src/url-search-propert
 
 declare global {
   interface HTMLElementEventMap {
-    'location-changed': CustomEvent<LocationChangedEventDetail>;
+    'search-property-changed': CustomEvent<LocationChangedEventDetail>;
   }
 }

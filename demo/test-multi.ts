@@ -16,7 +16,7 @@ export class TestMulti extends URLSearchPropertyMixin(LitElement) {
 
   render() {
     return html`
-      <div @click=${() => this.searchValue = 'asdasadf4344'}>searchValue: ${this.searchValue}</div>
+      <div @click=${() => this.searchValue = `${Date.now()}`}>[CLICK TO UPDATE]searchValue: ${this.searchValue}</div>
     `;
   }
 }

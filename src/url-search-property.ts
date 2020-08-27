@@ -30,7 +30,7 @@ export const getSearchParamValue = (propertyName?: string | null, type?: unknown
     }
     try {
       if(type === Number) {
-        return parseInt(propertyValue);
+        return parseInt(propertyValue, 10);
       } if(type === Boolean) {
         return stringToBoolean(propertyValue)
       } else {
@@ -134,7 +134,7 @@ export const URLSearchPropertyMixin = <T extends Constructor<LitElement>>(
       }
 
       window.dispatchEvent(
-        new CustomEvent('location-changed', {
+        new CustomEvent('search-property-changed', {
           detail: {url},
         }),
       );
@@ -166,7 +166,7 @@ export const URLSearchPropertyMixin = <T extends Constructor<LitElement>>(
       super.connectedCallback();
 
       /* Add listener for search params changed */
-      window.addEventListener('location-changed', this.boundLocationChanged);
+      window.addEventListener('search-property-changed', this.boundLocationChanged);
       window.addEventListener('popstate', this.boundLocationChanged);
 
       /* Needed to determine init value */
@@ -190,7 +190,7 @@ export const URLSearchPropertyMixin = <T extends Constructor<LitElement>>(
       this.updateUrl(searchParams);
 
       /* Cleaup listener */
-      window.removeEventListener('location-changed', this.boundLocationChanged);
+      window.removeEventListener('search-property-changed', this.boundLocationChanged);
       window.removeEventListener('popstate', this.boundLocationChanged);
 
       super.disconnectedCallback();
