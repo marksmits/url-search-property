@@ -2,10 +2,17 @@
   "name": "url-search-property",
   "version": "0.0.1",
   "description": "This project provides `UrlSearchQueryMixin` and a decorator `@searchProperty` for use with LitElement.",
-  "author": "Mark Smits",
+  "author": "Mark Smits <mark@zagenzagen.nl>",
   "license": "MIT",
-  "main": "index.js",
-  "module": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marksmits/url-search-property.git"
+  },
+  "bugs": {
+    "url": "https://github.com/marksmits/url-search-property/issues"
+  },
   "scripts": {
     "start": "concurrently --kill-others --names tsc,es-dev-server \"npm run tsc:watch\" \"es-dev-server --app-index demo/index.html --node-resolve --open --watch\"",
     "tsc:watch": "tsc --watch",
