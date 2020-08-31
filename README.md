@@ -1,8 +1,8 @@
 # @marksmits/url-search-property
 
-This project provides `UrlSearchQueryMixin` and a decorator `@searchProperty`. Through this decorator it is very easy to add properties to the URL search params. 
+This project provides `UrlSearchQueryMixin` and a decorator `@searchProperty`. Through this decorator it is very easy to link properties to url search params.
 
-This will create a two way bind between the property and the url param. If you update the url param the property will update and trigger a re-render like other properties do. Also if you update the property the url will auto update to reflect the new property value. 
+This will create a two way bind between the property and the url search param. If you update the url param the property will update and trigger a re-render like other properties do. Also if you update the property the url will auto update to reflect the new property value. 
 
 ## Installation
 ```sh
@@ -17,6 +17,12 @@ import { searchProperty, URLSearchPropertyMixin } from '@marksmits/url-search-pr
 export class TestApp extends URLSearchPropertyMixin(LitElement) {
   @searchProperty({ type: Number, name: 'active-tab' })
   activeIndex = 1;
+
+  @searchProperty({ type: Boolean })
+  enable = 1;
+
+  @searchProperty({ type: String })
+  searchValue?: string;
 }
 ```
 
