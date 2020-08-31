@@ -20,6 +20,9 @@ export class TestApp extends URLSearchPropertyMixin(LitElement) {
 }
 ```
 
+## Demo
+ - [Glitch](https://url-search-property.glitch.me)
+
 ## Using a `@searchProperty` decorator
 
 Important information when using the `@searchProperty`:
