@@ -3,5 +3,6 @@ tsconfig.json
 images/*
 test/*
 demo/*
+coverage/*
 *.ts
 !*.d.ts
