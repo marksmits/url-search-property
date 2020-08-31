@@ -4,7 +4,15 @@ This project provides `UrlSearchQueryMixin` and a decorator `@searchProperty`. T
 
 This will create a two way bind between the property and the url param. If you update the url param the property will update and trigger a re-render like other properties do. Also if you update the property the url will auto update to reflect the new property value. 
 
+## Installation
+```sh
+npm install @marksmits/url-search-property
+```
+
+## Example Usage
 ```ts
+import { searchProperty, URLSearchPropertyMixin } from '@marksmits/url-search-property/dist';
+
 @customElement('test-app')
 export class TestApp extends URLSearchPropertyMixin(LitElement) {
   @searchProperty({ type: Number, name: 'active-tab' })
@@ -52,4 +60,4 @@ This project uses the `URLSearchParams`. Make sure to check if you need to load 
 
 The [URLSearchParams](https://github.com/ungap/url-search-params) Polyfill.
 
-For browser support of the [MDN History API] (https://developer.mozilla.org/en-US/docs/Web/API/History_API)
+For browser support of the [MDN History API](https://developer.mozilla.org/en-US/docs/Web/API/History_API)

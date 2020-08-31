@@ -1,0 +1,7 @@
+tsconfig.json
+*.tgz
+images/*
+test/*
+demo/*
+*.ts
+!*.d.ts
