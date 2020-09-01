@@ -6,6 +6,11 @@
   "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.js",
+  "keywords": [
+    "URLSearchParams",
+    "lit-element",
+    "web components"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/marksmits/url-search-property.git"
