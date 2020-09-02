@@ -6,3 +6,8 @@ demo/*
 coverage/*
 *.ts
 !*.d.ts
+dist/demo/*
+dist/test/*
+karma.conf.js
+.editorconfig
+.eslintrc.js
