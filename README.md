@@ -19,7 +19,7 @@ export class TestApp extends URLSearchPropertyMixin(LitElement) {
   activeIndex = 1;
 
   @searchProperty({ type: Boolean })
-  enable = 1;
+  enable = true;
 
   @searchProperty({ type: String })
   searchValue?: string;
