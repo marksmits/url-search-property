@@ -1,6 +1,6 @@
 {
   "name": "@marksmits/url-search-property",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "This project provides `UrlSearchQueryMixin` and a decorator `@searchProperty` for use with LitElement. Through this decorator it is easy to map properties to url search params",
   "author": "Mark Smits <marksmits111@gmail.com>",
   "license": "MIT",
